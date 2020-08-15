@@ -2,7 +2,6 @@
 title: '자바스크립트의 매력'
 date: 2020-07-04 12:21:13
 category: 'javascript'
-thumbnail: './images/hello.png'
 draft: false
 ---
 
