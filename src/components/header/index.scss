@@ -1,13 +1,11 @@
-@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
 
 .home-header {
   margin-top: 0;
   border-bottom: none;
-  font-weight: 600;
-  font-size: 2rem;
-  font-family: 'NanumSquare';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff')
-    format('woff');
+  font-weight: 300;
+  font-size: 1.8rem;
+  font-family: 'Noto Sans KR', sans-serif;
   letter-spacing: -2px;
 }
 

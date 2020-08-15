@@ -1,8 +1,8 @@
 module.exports = {
-  title: `CHAN.dev`,
+  title: `즐겁게, 코드`,
   description: `Blog posted about ...`,
   author: `Chanmin, Kim`,
-  introduction: `배움을 두려워하지 않고, 계속해서 나아가는 사람이 되고 싶습니다.`,
+  introduction: `새로운 배움을 두려워하지 않고, 계속해서 나아가는 사람이 되고 싶습니다.`,
   siteUrl: `https://c17an.netlify.app/`, // Your blog site url
   social: {
     twitter: ``, // Your Twitter account
