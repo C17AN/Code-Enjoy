@@ -1,9 +1,9 @@
 module.exports = {
-  title: `CHAN's Devlog`,
+  title: `CHAN.dev`,
   description: `Blog posted about ...`,
   author: `Chanmin, Kim`,
   introduction: `배움을 두려워하지 않고, 계속해서 나아가는 사람이 되고 싶습니다.`,
-  siteUrl: `https://gatsby-starter-bee.netlify.com`, // Your blog site url
+  siteUrl: `https://c17an.netlify.app/`, // Your blog site url
   social: {
     twitter: ``, // Your Twitter account
     github: `https://github.com/C17AN`, // Your GitHub account
@@ -16,7 +16,7 @@ module.exports = {
   keywords: [`blog`],
   comment: {
     disqusShortName: '', // Your disqus-short-name. check disqus.com.
-    utterances: 'JaeYeopHan/gatsby-starter-bee', // Your repository for archive comment
+    utterances: 'C17AN/Devlog', // Your repository for archive comment
   },
   configs: {
     countOfInitialPost: 10, // Config your initial count of post

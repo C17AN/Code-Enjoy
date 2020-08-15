@@ -3,7 +3,7 @@
 .top {
   position: relative;
   width: 100%;
-  height: 60px;
+  height: 5rem;
   background: linear-gradient(269deg, #14598c, #d7e4ed, #73bbd8, #7593b9);
   background-size: 800% 800%;
 
@@ -13,13 +13,14 @@
 
   .link {
     display: inline-block;
-    font-size: 28px;
-    padding-top: 8px;
+    font-size: 1.5rem;
     color: $top-header-text-color;
     opacity: 0.7;
-    margin-left: 20px;
-    font-family: 'Catamaran';
-    font-weight: 800;
+    margin-left: 1.5rem;
+    margin-top: 1.5rem;
+    font-family: 'NanumSquareRound';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff')
+      format('woff');
   }
 }
 

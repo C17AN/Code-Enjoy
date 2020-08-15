@@ -1,17 +1,23 @@
 @import '../../styles/variables.scss';
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
 
 .thumbnail {
   display: block;
-  margin-bottom: 12px;
-  padding: 4px;
-  padding-bottom: 12px;
+  margin: 1.2rem 0;
+  padding: 1rem;
   box-shadow: none;
-  transition: text-shadow 0.3s, opacity 0.4s;
   opacity: 0;
-
+  border: 0.5px solid #dce3e9;
+  box-shadow: 2px 2px 4px rgb(47, 47, 47);
+  border-radius: 8px;
   p {
+    font-family: 'NanumSquare';
     font-size: 90%;
     line-height: 1.4;
+  }
+  h3 {
+    font-family: 'NanumSquare';
+    margin: 1rem;
   }
 }
 
