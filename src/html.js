@@ -12,8 +12,10 @@ export default class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1, maximum-scale=1, user-scalable=0, viewport-fit=cover"
           />
-          <meta name="theme-color" content="#7db7f5" />
           {this.props.headComponents}
+          <meta name="theme-color" content="#7db7f5" />
+          <meta property="og:title" content="즐겁게, 코드" />
+          <meta property="og:image" content="./content/assets/felog.png" />
         </head>
         <body {...this.props.bodyAttributes}>
           {this.props.preBodyComponents}
