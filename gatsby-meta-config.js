@@ -6,9 +6,9 @@ module.exports = {
   siteUrl: `https://c17an.netlify.app/`, // Your blog site url
   social: {
     twitter: ``, // Your Twitter account
-    github: `https://github.com/C17AN`, // Your GitHub account
+    github: `C17AN`, // Your GitHub account
     medium: ``, // Your Medium account
-    facebook: `https://www.facebook.com/profile.php?id=100013524540306`, // Your Facebook account
+    facebook: `100013524540306`, // Your Facebook account
     linkedin: ``, // Your LinkedIn account
     instagram: `https://www.instagram.com/chamming2/`,
   },

@@ -50,6 +50,9 @@ export const Bio = () => (
                       LinkedIn
                     </a>
                   )}
+                  <Link to={'/lol'} className="lol">
+                    <span>{`LOL`}</span>
+                  </Link>
                 </p>
               </div>
             </div>
