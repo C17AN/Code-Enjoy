@@ -1,5 +1,5 @@
 ---
-title: 'npm install, 이제는 알고 쓰자'
+title: '🚀 npm install, 이제는 알고 쓰자'
 date: 2020-08-15 12:21:13
 category: 'node.js'
 draft: false
@@ -7,7 +7,7 @@ draft: false
 
 ![thumbnail](./thumbnail.PNG)
 
-🚀 여러 강좌나 개발 문서를 따라가다 보면 `npm install` 에 `--save-dev` 나 `-g` 등 여러 접미어가 붙은 것을 확인할 수 있는데요.  과연 이 접미사들은 무엇이고 어떤 역할을 하는지 한번 알아봅시다.
+여러 강좌나 개발 문서를 따라가다 보면 `npm install` 에 `--save-dev` 나 `-g` 등 여러 접미어가 붙은 것을 확인할 수 있는데요.  과연 이 접미사들은 무엇이고 어떤 역할을 하는지 한번 알아봅시다.
 
 ## 1. npm install 과 패키지
 
@@ -24,7 +24,7 @@ draft: false
 
 하나는 프로젝트를 구동할 때 필요한 `dependencies` 목록에 추가될 `$ npm install (프로젝트명)` 으로 프로젝트를 설치하는 옵션이고, 다른 하나는 개발 단계에서만 필요한 `devDependencies` 목록에 추가될 `$ npm install -D (프로젝트명)` 옵션입니다.
 
-* `-D` 와 같은 접미사를 보통 "플래그" 라고 부르는데, 주로 사용되는 플래그의 종류를 정리하면 다음과 같다.
+* `-D` 와 같은 접미사를 보통 "플래그" 라고 부르는데, 주로 사용되는 플래그는 다음과 같습니다.
 
 ---
 
