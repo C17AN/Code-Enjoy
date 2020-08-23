@@ -1,12 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@latest/nanumbarungothicsubset.css');
 
 .home-header {
   margin-top: 0;
   border-bottom: none;
   font-weight: 300;
   font-size: 1.8rem;
-  font-family: 'Noto Sans KR', sans-serif;
   letter-spacing: -2px;
+  font-family: 'SeoulNamsanM';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff')
+    format('woff');
+  font-weight: 300;
+  font-style: normal;
 }
 
 .link {

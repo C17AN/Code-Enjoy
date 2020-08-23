@@ -1,0 +1,47 @@
+@import url(https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css);
+
+.container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem;
+  border: 1px solid black;
+  padding: 2rem;
+  width: 80%;
+}
+
+.game-count {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  animation: fadeIn 2s;
+  .content {
+    font-family: 'NanumSquare';
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+}
+
+.playtime {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: visibility 2s;
+  animation: fadeIn 2s;
+  .content {
+    font-family: 'NanumSquare';
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

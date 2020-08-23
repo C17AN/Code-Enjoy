@@ -5,11 +5,7 @@
   display: block;
   margin: 1.2rem 0;
   padding: 1rem;
-  box-shadow: none;
-  opacity: 0;
-  border: 0.5px solid #dce3e9;
-  box-shadow: 2px 2px 4px rgb(47, 47, 47);
-  border-radius: 8px;
+  border-bottom: 0.5px solid #dce3e9;
   p {
     font-family: 'NanumSquare';
     font-size: 95%;
@@ -18,6 +14,12 @@
   h3 {
     font-family: 'NanumSquare';
     margin: 1rem 0.5rem;
+  }
+  h6 {
+    margin: 1.5rem 0 0.5rem 0;
+    font-style: italic;
+    font-family: 'NanumSquare';
+    text-align: right;
   }
 }
 .thumbnail.visible {
