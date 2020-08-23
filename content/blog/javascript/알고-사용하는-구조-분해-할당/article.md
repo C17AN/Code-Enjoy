@@ -29,7 +29,7 @@ const {author, framework, version} = siteData;
 console.log(`Written By ${author}`); // "Written By 찬민"
 ```
 
-`siteData` 의 프로퍼티 값들을 변수에 담아 사용할 수 있게 된 모습인데요, 이 때 변수명과 프로퍼티 이름은 일치해야 합니다.
+`siteData` 의 프로퍼티 값들을 프로퍼티 이름과 동일한 변수에 담아 사용할 수 있게 된 모습입니다.
 
 ```javascript
 const siteData = {
@@ -42,9 +42,7 @@ const {author: name, framework, version} = siteData;
 console.log(`Written By ${name}`); // "Written By 찬민"
 ```
 
-흔히 사용되는 패턴은 아닌 것 같지만 만약 변수명을 프로퍼티와 다른 이름으로 하고 싶다면 `{프로퍼티명: 변수명} = 대입할 객체` 의 형태로 사용할 수도 있습니다.
-
-또한 중첩된 객체 내 속성값을 추출하기 위해서는 대입 연산자 좌측의 객체와 대입하는 객체가 동일한 중첩 구조를 가져야 합니다.
+만약 변수명을 프로퍼티와 다른 이름으로 하고 싶다면 `{프로퍼티명: 변수명} = 대입할 객체` 의 형태로 사용할 수도 있습니다.
 
 
 ```javascript
@@ -62,6 +60,10 @@ const siteData = {
 const {author, framework, version, category: {web}} = siteData;
 console.log(web) // true
 ```
+
+또한 중첩된 객체 내 속성값을 추출하기 위해서는 대입 연산자 좌측의 객체와 대입하는 객체가 동일한 중첩 구조를 가져야 합니다.
+
+
 
 
 ## 2. 배열의 구조 분해 할당

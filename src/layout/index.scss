@@ -1,11 +1,13 @@
 @import '../styles/variables.scss';
 @import '../styles/light-theme.scss';
 @import '../styles/dark-theme.scss';
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
 
 body {
-  font-family: 'NanumSquare', 'Noto Sans KR', sans-serif;
-  font-weight: 375;
+  font-family: 'NanumSquare', 'Spoqa Han Sans', 'Noto Sans KR', sans-serif;
+  font-weight: 400;
+  text-shadow: none;
   background-color: $light-background-color;
   -webkit-text-size-adjust: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -18,4 +20,12 @@ body {
 
 body:active {
   cursor: url('../../content/assets/click.png'), auto;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-family: 'Spoqa Han Sans', 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+    font-size: 0.9rem;
+  }
 }
