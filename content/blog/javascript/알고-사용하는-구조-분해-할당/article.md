@@ -9,14 +9,14 @@ draft: false
 <div style = "text-align: center; margin-bottom: 1rem; font-size: 0.8rem">해체하고, 분해한다!</div>
 
 
-구조 분해 할당*(destructuring assignment)* 은 ES6에서 가장 호평받는 기능들 중 하나로, 구조 분해 할당을 사용하면 객체나 배열에 담긴 요소들을 쉽게 변수로 추출해 사용할 수 있다는 장점이 있습니다.
+구조 분해 할당*(destructuring assignment)* 은 ES6에서 가장 호평받는 기능들 중 하나로, 구조 분해 할당을 사용하면 객체나 배열에 담긴 요소들을 쉽게 변수로 추출해 사용할 수 있습니다.
 
 그러나 구조 분해 할당은 객체에 사용될 때와 배열에 사용될 때 그 기능이 다른데요, 오늘은 두 동작의 차이를 알아보도록 하겠습니다.
 
 
 ## 1. 객체의 구조 분해 할당
 
-객체의 구조 분해 할당을 사용한 예시입니다.
+객체의 구조 분해 할당을 사용한 예시 :
 
 ```javascript
 const siteData = {
@@ -82,17 +82,22 @@ console.log(heejin); // 164
 console.log(junyeong); // 182
 ```
 
-위 코드에서도 `height`의 첫 번째 요소가 대입 연산자 왼쪽 익명 배열의 첫 번째 요소에 대입된 것을 확인할 수 있는데, 이러한 특징 때문에 배열의 구조 분해 할당에서는 대입 순서가 매우 중요합니다.
+위 코드에서도 `height`의 첫 번째 요소가 대입을 받는 익명 배열의 첫 번째 요소에 대입된 것을 확인할 수 있는데, 이런 특징 때문에 배열의 구조 분해 할당에서는 대입 순서가 매우 중요합니다.
+
+잘못된 인덱스에 대입한 예시 :
 
 ```js
 const infoList = ["찬민", "3.1.2", "즐겁게, 음악"];
 
 const [title, version, author] = infoList;
+// 잘못된 대입 순서로 인해 제목과 저자가 바뀐 상황
 console.log(author); // "즐겁게 음악" -> author = infoList[2]
 console.log(title); // "찬민" -> -> author = infoList[0]
 ```
 
 또한 대입 연산자 왼쪽의 할당을 받는 값이 반드시 독립된 변수일 필요는 없으며, 할당을 받을 수 있는 것이라면 무엇이든 대입 연산자의 왼쪽에 올 수 있습니다.
+
+예시 :
 
 ```js
 const height = [178, 164, 182];

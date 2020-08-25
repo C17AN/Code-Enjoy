@@ -7,7 +7,7 @@ draft: false
 
 ![thumbnail](./thumbnail.PNG)
 
-여러 강좌나 개발 문서를 따라가다 보면 `npm install` 에 `--save-dev` 나 `-g` 등 여러 접미어가 붙은 것을 확인할 수 있는데요.  과연 이 접미사들은 무엇이고 어떤 역할을 하는지 한번 알아봅시다.
+여러 강좌나 개발 문서를 따라가다 보면 `npm install` 에 `--save-dev` 나 `-g` 등 여러 접미어가 붙은 것을 확인할 수 있는데요, 이것들은 무엇이고 어떤 역할을 하는지 알아보겠습니다.
 
 ## 1. npm install 과 패키지
 
@@ -24,7 +24,7 @@ draft: false
 
 하나는 프로젝트를 구동할 때 필요한 `dependencies` 목록에 추가될 `$ npm install (프로젝트명)` 으로 프로젝트를 설치하는 옵션이고, 다른 하나는 개발 단계에서만 필요한 `devDependencies` 목록에 추가될 `$ npm install -D (프로젝트명)` 옵션입니다.
 
-* `-D` 와 같은 접미사를 보통 "플래그" 라고 부르는데, 주로 사용되는 플래그는 다음과 같습니다.
+* `-D` 와 같은 접미어를 "플래그" 라고 부르는데, 주로 사용되는 플래그는 다음과 같습니다.
 
 ---
 
@@ -38,16 +38,16 @@ draft: false
 
 ## 2. 1. -P, --save-prod 플래그를 사용할 때
 
-`-P` 플래그는 사실 사용할 일이 거의 없을 겁니다.
+`-P`, `--save-prod` 플래그는 사용할 일이 많지 않습니다.
 
-왜냐하면 `-P` 플래그의 효과는 기본 `$ npm install (프로젝트)` 와 완전히 동일하기 때문인데요,   
-마찬가지로 `--save-prod` 플래그 역시 기본 동작과 동일하게 패키지를 설치하고 패키지를 프로젝트의 `dependencies` 목록에 추가합니다.
+왜냐하면 `-P` 플래그의 효과는 기본 `$ npm install (프로젝트)` 와 완전히 동일하기 때문인데요, `-P` 플래그는 패키지를 설치한 후 프로젝트의 `dependencies` 목록에 추가합니다.
 
 > 결론 : -P 플래그(기본 옵션) 는 프로젝트의 의존성 패키지 `dependencies` 목록에 추가한다.
 
 ## 2. 2. -D, --save-dev 플래그를 사용할 때
 
-아마 대부분 헷갈려하는 부분이 바로 이 플래그일 것입니다.  
+사람들이 잘 헷갈려하는 플래그가 바로 `-D` 플래그입니다. 
+
 `-D` 플래그는 기본 `-P` 와 동일하게 프로젝트의 `node_modules` 폴더에 패키지를 설치하지만, 패키지명을 `dependencies` 가 아닌 `devDependencies` 에 기록한다는 차이가 있습니다.
 
 `dependencies` 와 `devDependencies` 의 차이는 아래와 같습니다.
@@ -55,7 +55,7 @@ draft: false
 ---
 
 1. dependencies : `express` 패키지처럼 실제 코드에도 포함되며 앱 구동을 위해 필요한 의존성 파일들
-2. devDependencies : `concurrently` 패키지처럼 실제 코드에 포함되지 않으며 개발 프로세스에만 필요한 의존성 파일들
+2. devDependencies : `concurrently` 패키지처럼 실제 코드에 포함되지 않으며 개발 단계에만 필요한 의존성 파일들
 
 ---
 
@@ -65,7 +65,7 @@ draft: false
 
 `-g` 또는 `--global` 플래그는 약간 다른 동작을 수행합니다.
 
-`$ npm install (패키지명)` 은 프로젝트의 `node_modules` 폴더에 패키지를 설치했지만, `-g` 플래그를 통해 패키지를 설치하면 프로젝트가 아닌 시스템의 `node_modules` 폴더에 패키지를 설치하게 됩니다.  
+`$ npm install (패키지명)` 은 프로젝트 폴더에 패키지를 설치했지만, `-g` 플래그를 통해 패키지를 설치하면 시스템 폴더에 패키지를 설치하게 됩니다.  
 
 (Win10 기준으로는 `(사용자명)\AppData\Roaming\npm\node_modules`)
 
@@ -75,11 +75,11 @@ draft: false
 
 ## 3. 의존성 패키지를 설치할 때
 
-패키지명을 붙이지 않고 `$ npm install` 만을 실행하게 되면 프로젝트의 `package.json` 에 기록된 모든 의존성 패키지들을 내려받게 되는데요, 역시 이때도 플래그를 사용할 수 있습니다.
+패키지명을 붙이지 않고 `$ npm install` 만을 실행하게 되면 프로젝트의 `package.json` 에 기록된 모든 의존성 패키지들을 내려받게 되는데요, 이때도 플래그를 사용할 수 있습니다.
 
 방금 다룬 `devDependencies` 파일은 개발에만 사용된다고 했으니 일반 사용자들이 이 패키지를 내려받는 것은 시·공간의 낭비가 될 가능성이 있겠죠?
 
-그래서 사용하는 플래그가 `-production` 플래그로, 이 플래그를 붙이면 `devDependencies` 를 제외한 의존성 파일만을 내려받게 됩니다.
+그래서 사용하는 플래그가 `-production` 으로, 이 플래그를 붙이면 `devDependencies` 를 제외한 의존성 파일만을 내려받게 됩니다.
 
 ```json
 {
@@ -92,11 +92,11 @@ draft: false
 }
 ```
 
-만약 이렇게 기록된 `packages.json` 이 있고 `$ npm install -production` 을 실행한다면 프로젝트는 `concurrently` 패키지를 제외하고 `express` 패키지만을 설치할 것입니다.
+만약 이렇게 기록된 `packages.json` 이 있고 `$ npm install -production` 을 실행한다면 프로젝트는 `concurrently` 패키지는 무시하고 `express` 패키지만을 설치합니다.
 
 > 결론 : -production 플래그를 사용하면 `devDependencies` 목록을 제외한 패키지들을 설치한다.
 
 ## 4. 결론
 
-사실 플래그 없이 `npm install` 만을 사용해도 동작은 하지만, 플래그를 사용해 `dependencies` 와 `devDependencies` 로 의존성 목록을 구분하면 "이건 개발용, 이건 실제 서비스용" 이렇게 훨씬 알아보기 쉬워진다는 면에서 개발자들에게 필요한 기능이라고 볼 수 있겠습니다. 😄
+사실 플래그 없이 `npm install` 만을 사용해도 동작은 하지만, 플래그를 사용해 `dependencies` 와 `devDependencies` 로 의존성 목록을 구분하면 "이건 개발용, 이건 실제 서비스용" 으로 구분하기 쉬워진다는 면에서 개발자들에게 필요한 기능이라고 볼 수 있겠습니다. 😄
 
