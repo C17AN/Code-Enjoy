@@ -2,8 +2,11 @@
 title: '🛫 항공교통물류학부 홈페이지 제작기 - 상편'
 date: 2020-08-27 12:21:13
 category: 'essay'
+thumbnail: './image/thumbnail.PNG'
 draft: false
 ---
+
+![thumbnail](./image/thumbnail.PNG)
 
 ## 1. Prelude
 

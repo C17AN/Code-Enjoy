@@ -1,7 +1,8 @@
 ---
-title: '🔍 해체하고 할당하는 구조 분해 할당'
+title: '[ES6] - 해체하고 할당하는 구조 분해 할당'
 date: 2020-08-23 12:21:13
 category: 'javascript'
+thumbnail: './Velkoz.jpg'
 draft: false
 ---
 
