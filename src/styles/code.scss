@@ -84,14 +84,17 @@ pre[class*='language-'] {
 }
 
 .token.punctuation {
-  color: #e0e0e0;
+  color: #5e81ac;
 }
 
 .token.tag,
-.token.attr-name,
 .token.namespace,
 .token.deleted {
-  color: #e2777a;
+  color: #7ea3ce;
+}
+
+.token.attr-name {
+  color: #8fbcbb;
 }
 
 .token.function-name {
