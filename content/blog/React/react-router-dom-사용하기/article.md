@@ -16,6 +16,7 @@ draft: false
 ## 1. why Router?
 
 "그런데 라우팅은 `<a href = "">` 태그를 사용하면 되지 않나?" 라고 생각하실 수도 있습니다.  
+
 그러나 `<a>` 태그를 통해 다른 페이지로 이동하면 서버에 완전히 새로운 페이지를 요청하게 되는데요, 그 결과 브라우저는 새로고침을 수행함과 동시에 보고 있던 컴포넌트가 갖고 있던 모든 상태값을 잃게 됩니다.
 
 
@@ -61,7 +62,7 @@ export default App
 
 보시는 것처럼 `react-router-dom` 을 사용하면 새로고침이 일어나지 않고 상태값도 그대로 유지되지만, `<a>` 태그를 사용했을 때는 새로고침이 일어나 상태값이 초기화된 모습입니다.
 
-> 정리 : `react-router-dom` 을 사용하는 이유 - 브라우저 새로고침으로 인한 상태값 손실 방지
+> 정리 : react-router-dom 을 사용하는 이유 - 브라우저 새로고침으로 인한 상태값 손실 방지
 
 ## 2. How Router?
 
@@ -77,8 +78,6 @@ export default App
 
 라우터는 라우팅을 진행할 컴포넌트들을 감싸는 컴포넌트로 `<BrowserRouter>` 또는 `<HashRouter>` 를 사용해 주로 루트 컴포넌트를 감싸줍니다.  
 
-> **[예시] - index.js**
-
 ```js
 import React from 'react'
 import ReactDOM from 'react-dom'
@@ -93,7 +92,7 @@ ReactDOM.render(
 )
 ```
 
-**- [참고하면 좋은 글]**
+**[참고하면 좋은 글]**
 
 > [BrowserRouter와 HashRouter의 차이 - stackoverflow](https://stackoverflow.com/questions/51974369/hashrouter-vs-browserrouter)
 
@@ -173,7 +172,7 @@ export default App
 
 만약 두 차이를 잘 모르겠다면 `component` 속성만 사용해도 무방합니다.
 
-**- [참고하면 좋은 글]**
+**[참고하면 좋은 글]**
 
 > [component와 render 속성의 차이 - medium](https://medium.com/@migcoder/difference-between-render-and-component-prop-on-react-router-v4-368ca7fedbec)  
 > [exact 의 유무에 따른 차이 - stackoverflow](https://stackoverflow.com/questions/49162311/react-difference-between-route-exact-path-and-route-path)
@@ -196,7 +195,7 @@ export default App
 
 리액트는 원래 한 화면에서 컴포넌트를 업데이트하는 **단일 페이지 어플리케이션**을 지향하지만, 라우팅 라이브러리를 사용하면 여러 페이지를 넘나들 수 있는 완전한 홈페이지를 만들 수 있다는 것도 알게 되었습니다.
 
-아래에 **샘플 코드** 도 첨부하니, 이를 활용해 간단하게 연습해 보시는 걸 추천합니다. 😄
+아래에 **샘플 코드** 도 첨부하니, 이를 활용해 간단하게 연습해보는 것을 추천합니다. 😄
 
 ```js
 import React from 'react'
