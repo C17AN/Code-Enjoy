@@ -1,14 +1,14 @@
 @import url('https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@latest/nanumbarungothicsubset.css');
-
+@import url(//fonts.googleapis.com/earlyaccess/nanumpenscript.css);
 @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
 
 .home-header {
   margin-top: 0;
   border-bottom: none;
   font-weight: 300;
-  font-size: 1.8rem;
+  font-size: 2.6rem;
   letter-spacing: -2px;
-  font-family: 'SeoulNamsanM';
+  font-family: 'Nanum Pen Script', 'NanumBarunGothic';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff')
     format('woff');
   font-weight: 300;
