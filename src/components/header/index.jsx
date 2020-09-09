@@ -9,7 +9,9 @@ export const Header = ({ title, location, rootPath }) => {
     isRoot && (
       <h1 className="home-header">
         <Link to={`/`} className="link">
-          {title} 𝅘𝅥𝅮
+          <div className="note_1">♬</div>
+          <span> </span>
+          {title} <div className="note_2">♪</div>
         </Link>
       </h1>
     )

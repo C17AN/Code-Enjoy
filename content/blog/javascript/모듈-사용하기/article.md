@@ -321,5 +321,5 @@ console.log(validator.setInvalidMessage("삭제"));
 ---
 
 > 📖 참고   
-> 1. [**모던 자바스크립트 튜토리얼**](https://ko.javascript.info/modules-intro#ref-296)
-> 2. 조 모건, 자바스크립트 코딩의 기술 (2019), 길벗
+- [**모던 자바스크립트 튜토리얼**](https://ko.javascript.info/modules-intro#ref-296)
+- 조 모건, 자바스크립트 코딩의 기술 (2019), 길벗
