@@ -3,7 +3,7 @@ module.exports = {
   description: `즐거운 개발자의 블로그 📃`,
   author: `Chanmin, Kim`,
   introduction: `새로운 배움을 두려워하지 않고, 계속해서 나아가는 사람이 되고 싶습니다.`,
-  siteUrl: `https://code-enjoy.netlify.app/`, // Your blog site url
+  siteUrl: `https://merrily-code.netlify.app`, // Your blog site url
   social: {
     twitter: ``, // Your Twitter account
     github: `C17AN`, // Your GitHub account
@@ -22,7 +22,7 @@ module.exports = {
     countOfInitialPost: 10, // Config your initial count of post
   },
   sponsor: {
-    buyMeACoffeeId: 'jbee',
+    buyMeACoffeeId: 'c17an',
   },
   share: {
     facebookAppId: '', // Add facebookAppId for using facebook share feature v3.2
