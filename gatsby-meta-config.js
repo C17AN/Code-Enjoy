@@ -3,7 +3,7 @@ module.exports = {
   description: `즐거운 개발자의 블로그 📃`,
   author: `Chanmin, Kim`,
   introduction: `새로운 배움을 두려워하지 않고, 계속해서 나아가는 사람이 되고 싶습니다.`,
-  siteUrl: `https://c17an.netlify.app/`, // Your blog site url
+  siteUrl: `https://code-enjoy.netlify.app/`, // Your blog site url
   social: {
     twitter: ``, // Your Twitter account
     github: `C17AN`, // Your GitHub account
