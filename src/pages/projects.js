@@ -5,6 +5,7 @@ import { Top } from '../components/top'
 import { rhythm } from '../utils/typography'
 import * as Lang from '../constants'
 import '../components/top/index.scss'
+import '../styles/portfolio.scss'
 
 export default ({ data, location }) => {
   const pages = data.allMarkdownRemark.edges
@@ -29,14 +30,14 @@ export default ({ data, location }) => {
           )}`,
         }}
       >
-        <div style={{ display: `flex`, justifyContent: `space-between` }}>
+        <div className="portfolio__container">
           <div
+            className="portfolio__content"
             dangerouslySetInnerHTML={{ __html: about.html }}
-            style={{ maxWidth: rhythm(25) }}
           />
           <div
+            className="portfolio__content"
             dangerouslySetInnerHTML={{ __html: projects.html }}
-            style={{ maxWidth: rhythm(25) }}
           />
         </div>
       </div>
