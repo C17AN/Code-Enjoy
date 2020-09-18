@@ -24,9 +24,7 @@ export const Bio = () => (
               />
               <div className="author-name">
                 <span className="author-name-prefix">Written by</span>
-                <Link to={'/about'} className="author-name-content">
-                  <span>@{author}</span>
-                </Link>
+                <span className="author-name-content">@{author}</span>
                 <div className="author-introduction">{introduction}</div>
                 <p className="author-socials">
                   {social.github && (
@@ -50,6 +48,9 @@ export const Bio = () => (
                       LinkedIn
                     </a>
                   )}
+                  <Link to={'/projects'}>
+                    <span>Portfolio</span>
+                  </Link>
                 </p>
               </div>
             </div>

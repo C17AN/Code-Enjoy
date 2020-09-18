@@ -1,0 +1,25 @@
+.portfolio__container {
+  display: flex;
+  justify-content: space-between;
+<<<<<<< HEAD
+  h1 {
+    font-size: 1.7rem;
+  }
+=======
+>>>>>>> 3fe297a... 포트폴리오 페이지 반응형 개선
+}
+
+.portfolio__content {
+  max-width: 45%;
+}
+
+@media (max-width: 768px) {
+  .portfolio__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .portfolio__content {
+    max-width: 100%;
+  }
+}
