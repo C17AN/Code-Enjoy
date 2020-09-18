@@ -1,0 +1,23 @@
+.portfolio__container {
+  display: flex;
+  justify-content: space-between;
+  h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+}
+
+.portfolio__content {
+  max-width: 45%;
+}
+
+@media (max-width: 768px) {
+  .portfolio__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .portfolio__content {
+    max-width: 100%;
+  }
+}
