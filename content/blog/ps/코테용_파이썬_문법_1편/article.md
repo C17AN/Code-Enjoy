@@ -1,5 +1,5 @@
 ---
-title: '[PS] - 코딩 테스트용 파이썬 문법 정리 - 1편'
+title: '[PS] - 코딩 테스트용 파이썬 문법 정리 : 1편'
 date: 2020-09-17 12:21:13
 category: 'PS'
 thumbnail: './thumbnail.PNG'
