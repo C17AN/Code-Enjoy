@@ -58,13 +58,18 @@ export function Head({ description, lang, meta, keywords, title, thumbnail }) {
                 name: `twitter:image`,
                 content: thumbnail,
               },
+              { name: 'theme-color', content: '#7db7f5' },
+              {
+                name: 'google-site-verification',
+                content: 'wD0KSN8B6LGhPSmmNiCWL5ZrRvc2jVjJWngCiKeQwTg',
+              },
             ]
               .concat(
                 keywords.length > 0
                   ? {
-                    name: `keywords`,
-                    content: keywords.join(`, `),
-                  }
+                      name: `keywords`,
+                      content: keywords.join(`, `),
+                    }
                   : []
               )
               .concat(meta)}
