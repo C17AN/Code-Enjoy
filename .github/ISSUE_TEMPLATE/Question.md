@@ -2,5 +2,3 @@
 name: ❓ 질문
 about: 궁금한 점이 있으시면 이슈로 남겨주세요!
 ---
-
-## Description

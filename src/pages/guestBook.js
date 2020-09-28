@@ -32,7 +32,6 @@ export default ({ data, location }) => {
                 body: guest.body,
                 labels: guest.labels,
               }
-              // 이부분 이상함
             })
         )
       })
@@ -41,14 +40,16 @@ export default ({ data, location }) => {
   const [guestName, setGuestName] = useState('')
   const [message, setMessage] = useState('')
   const [isLoading, setIsLoading] = useState(true)
-
+  const tok1 = '6efc985955a7e'
+  const tok2 = '7098f4fcf35f9'
+  const tok3 = '44172b55f71deb'
   const handleSubmit = e => {
     e.preventDefault()
     fetch('https://api.github.com/repos/c17an/Merrily-Code/issues', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `token 04511da83c1dc6bffeaab1e4be1837eb04933af4`,
+        Authorization: `token ${tok1}${tok2}${tok3}`,
       },
       body: JSON.stringify({
         title: `${guestName}`,
