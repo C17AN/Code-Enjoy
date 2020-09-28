@@ -1,0 +1,13 @@
+.guest {
+  display: flex;
+  flex-direction: column;
+}
+
+.guest__name {
+  font-weight: 600;
+}
+
+.guest__message {
+  // 멀티라인 텍스트를 "표시할 때"
+  white-space: pre-line;
+}
