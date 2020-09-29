@@ -39,7 +39,7 @@ On GitHub : [https://github.com/C17AN/where-are-you](https://github.com/C17AN/wh
 
 # 수상실적
 
-- 2020년 오픈소스 컨트리뷰톤 특별상 수상 (모던 자바스크립트 튜토리얼 팀 소속)
+- 2020년 오픈소스 컨트리뷰톤 장려상 수상 (모던 자바스크립트 튜토리얼 팀 소속)
 
 
 </div>
