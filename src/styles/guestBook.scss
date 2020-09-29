@@ -1,3 +1,7 @@
+.guestBook__title {
+  margin-bottom: 0.5rem;
+}
+
 .guestBook__container {
   display: flex;
   flex-direction: column;
@@ -5,6 +9,7 @@
 
 .guestBook__guestList {
   overflow-y: scroll;
+  overflow-x: visible;
   height: 280px;
 }
 
@@ -14,21 +19,42 @@
 
 .guestBook__form {
   width: 100%;
+  border-top: 1px solid hsla(0, 0%, 0%, 0.07);
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
 }
 
+.guestBook__secret {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .guestBook__name {
   margin: 1rem 0;
+  padding: 0.4rem;
+  border-radius: 6px;
+  border: 1px solid hsla(0, 0%, 0%, 0.3);
+}
+
+.guestBook__secret__label {
+  margin: 0 0.5rem;
+}
+
+.guestBook__secret__label:hover {
+  cursor: url('../../content/assets/event.png'), auto;
 }
 
 .guestBook__button {
-  position: relative;
-  margin: 1.5rem 0;
+  display: inline-block;
+  margin: 1.5rem 1rem;
+  cursor: url('../../content/assets/event.png'), auto;
   width: 10rem;
 }
 
 .guestBook__message {
   resize: none;
+  border-radius: 6px;
+  padding: 0.4rem;
+  border: 1px solid hsla(0, 0%, 0%, 0.3);
 }

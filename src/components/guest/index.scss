@@ -1,12 +1,22 @@
+@import url(//fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+
 .guest {
   display: flex;
   flex-direction: column;
+  padding-left: 1rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid lightgray;
 }
 
+.guest:hover {
+  transition: 0.1s ease-in;
+  transform: scale(1.01);
+}
+
 .guest__name {
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 1.6rem;
+  font-family: 'Nanum Pen Script', 'NanumBarunGothic';
 }
 
 .guest__message {

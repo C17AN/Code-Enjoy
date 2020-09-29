@@ -8,17 +8,16 @@ import * as Lang from '../constants'
 import '../components/top/index.scss'
 import '../styles/guestBook.scss'
 
-const timestamp = new Date().getTime()
-
 export default ({ data, location }) => {
   useEffect(() => {
     fetch('https://api.github.com/repos/c17an/Merrily-Code/issues')
       .then(res => res.json())
       .then(data => {
-        console.log(data)
         setGuestList(
           data
             .filter(issue => {
+              // 실제 이슈 리스트에서 정보 가공하는 단계
+              // 유지보수 할때 참고 - labels[0]은 GuestBook 라벨, labels[1] 은 Secret(비밀글) 라벨임
               if (issue.labels[0] && issue.labels[0].name === 'GuestBook') {
                 return true
               } else {
@@ -26,11 +25,10 @@ export default ({ data, location }) => {
               }
             })
             .map(guest => {
-              console.log(guest)
               return {
                 title: guest.title,
                 body: guest.body,
-                labels: guest.labels,
+                labels: guest.labels.map(label => label),
               }
             })
         )
@@ -39,11 +37,13 @@ export default ({ data, location }) => {
   const [guestList, setGuestList] = useState([])
   const [guestName, setGuestName] = useState('')
   const [message, setMessage] = useState('')
+  const [secret, setSecret] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
   const tok1 = '6efc985955a7e'
   const tok2 = '7098f4fcf35f9'
   const tok3 = '44172b55f71deb'
   const handleSubmit = e => {
+    const timestamp = new Date().getTime()
     e.preventDefault()
     fetch('https://api.github.com/repos/c17an/Merrily-Code/issues', {
       method: 'POST',
@@ -54,17 +54,16 @@ export default ({ data, location }) => {
       body: JSON.stringify({
         title: `${guestName}`,
         body: `${message} - ${new Date(timestamp).toLocaleString()}`,
-        labels: ['GuestBook'],
+        labels: secret ? ['GuestBook', 'Secret'] : ['GuestBook'],
       }),
     })
       .then(res => res.json())
       .then(data => {
-        console.log(data)
         setGuestList([
           {
             title: guestName,
             body: message + ` - ${new Date(timestamp).toLocaleString()}`,
-            labels: 'GuestBook',
+            labels: secret ? ['GuestBook', 'Secret'] : ['GuestBook'],
           },
           ...guestList,
         ])
@@ -78,7 +77,9 @@ export default ({ data, location }) => {
   const handleMessageChange = e => {
     setMessage(e.target.value)
   }
-  console.log(guestList)
+  const handleSecretCheck = e => {
+    setSecret(!secret)
+  }
   return (
     <>
       <Top title={'즐겁게, 코드'} location={location} rootPath={'rootPath'} />
@@ -92,11 +93,16 @@ export default ({ data, location }) => {
           )}`,
         }}
       >
-        <h1>📝 방명록</h1>
+        <h1 className="guestBook__title">📝 방명록</h1>
         <div className="guestBook__container">
           <div className="guestBook__guestList">
             {guestList.map((guest, idx) => (
-              <Guest key={idx} title={guest.title} message={guest.body}></Guest>
+              <Guest
+                key={idx}
+                title={guest.title}
+                message={guest.body}
+                labels={guest.labels}
+              ></Guest>
             ))}
           </div>
           <form className="guestBook__form" onSubmit={e => handleSubmit(e)}>
@@ -117,12 +123,27 @@ export default ({ data, location }) => {
               onChange={e => handleMessageChange(e)}
               value={message}
             ></textarea>
-            <button
-              className={`guestBook__button`}
-              disabled={!(guestName && message)}
-            >
-              방명록 남기기
-            </button>
+            <div className="guestBook__secret__container">
+              <input
+                type="checkbox"
+                name="guestBook__secret"
+                id="guestBook__secret"
+                className="guestBook__secret__checkbox"
+                onChange={handleSecretCheck}
+              />
+              <label
+                for="guestBook__secret"
+                className="guestBook__secret__label"
+              >
+                비밀 메시지
+              </label>
+              <button
+                className="guestBook__button"
+                disabled={!(guestName && message)}
+              >
+                방명록 남기기
+              </button>
+            </div>
           </form>
         </div>
       </div>
