@@ -9,11 +9,17 @@ export const Footer = () => (
       C17AN
     </a>
     , motivated by{' '}
-    <a
-      href="https://www.youtube.com/watch?v=5AyXpaLWpTA&t=466s"
-      target="_blank"
-    >
-      즐겁게, 음악
+    <a href="https://www.youtube.com/watch?v=5AyXpaLWpTA" target="_blank">
+      즐겁게, 음악 🎹
     </a>
+    <div>
+      🔨 Built with{' '}
+      <a
+        href="https://github.com/JaeYeopHan/gatsby-starter-bee"
+        target="_blank"
+      >
+        Gatsby-starter-bee
+      </a>
+    </div>
   </footer>
 )
