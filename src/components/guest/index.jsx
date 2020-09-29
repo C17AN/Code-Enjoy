@@ -2,7 +2,6 @@ import React from 'react'
 import './index.scss'
 
 export const Guest = ({ title, message, labels }) => {
-  console.log(title, labels)
   return (
     <div className="guest">
       <h3 className="guest__name">

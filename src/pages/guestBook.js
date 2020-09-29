@@ -34,6 +34,7 @@ export default ({ data, location }) => {
         )
       })
   }, [])
+  
   const [guestList, setGuestList] = useState([])
   const [guestName, setGuestName] = useState('')
   const [message, setMessage] = useState('')
