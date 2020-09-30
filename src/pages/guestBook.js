@@ -58,13 +58,13 @@ export default ({ data, location }) => {
         labels: secret ? ['GuestBook', 'Secret'] : ['GuestBook'],
       }),
     })
-      .then(res => res.json())
       .then(data => {
         setGuestList([
           {
             title: guestName,
             body: message + ` - ${new Date(timestamp).toLocaleString()}`,
-            labels: secret ? ['GuestBook', 'Secret'] : ['GuestBook'],
+            //labels: secret ? ['GuestBook', 'Secret'] : ['GuestBook'],
+            labels: secret ? [{name: "GuestBook"}, {name: "Secret"}] : [{name: "GuestBook"}]
           },
           ...guestList,
         ])
