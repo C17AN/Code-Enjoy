@@ -4,6 +4,20 @@
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
 
+h1 {
+  font-weight: 700;
+  line-height: 1.2;
+  font-family: 'NanumSquare', 'Spoqa Han Sans', 'Noto Sans KR', sans-serif;
+}
+
+h2 {
+  font-weight: 700;
+  line-height: 1.2;
+  font-family: 'NanumSquare', 'Spoqa Han Sans', 'Noto Sans KR', sans-serif;
+  margin-top: 56px;
+  margin-bottom: 20px;
+}
+
 body {
   font-family: 'NanumSquare', 'Spoqa Han Sans', 'Noto Sans KR', sans-serif;
   font-weight: lighter;
