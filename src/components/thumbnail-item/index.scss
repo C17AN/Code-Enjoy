@@ -26,3 +26,11 @@
 .thumbnail.visible {
   opacity: 1;
 }
+
+.thumbnail:hover {
+  transition: 0.1s ease-out;
+  transform: scale(1.02);
+  border-radius: 8px;
+  border: 1px solid #cdcdcd;
+  box-shadow: 2px 2px 2px #cdcdcd;
+}

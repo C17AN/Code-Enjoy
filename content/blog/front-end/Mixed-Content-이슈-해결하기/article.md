@@ -1,7 +1,7 @@
 ---
-title: '[Front-End] - Mixed Content 이슈를 해결하며'
+title: '[FE] - Mixed Content 이슈를 해결하며'
 date: 2020-10-09 12:21:13
-category: 'Front-End'
+category: 'FE'
 thumbnail: './thumbnail.PNG'
 draft: false
 ---

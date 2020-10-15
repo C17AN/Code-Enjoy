@@ -1,5 +1,5 @@
 ---
-title: '[SWEA] - SW 문제 해결 기본 - Queue'
+title: '[SWEA] - SW 문제 해결 기본 : Queue'
 date: 2020-10-06 12:21:13
 category: 'PS'
 thumbnail: './thumbnail.PNG'

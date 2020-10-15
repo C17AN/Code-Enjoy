@@ -1,7 +1,7 @@
 ---
-title: '[Front-End] - CORS의 역습'
+title: '[FE] - CORS의 역습'
 date: 2020-09-15 12:21:13
-category: 'Front-End'
+category: 'FE'
 thumbnail: './thumbnail.PNG'
 draft: false
 ---

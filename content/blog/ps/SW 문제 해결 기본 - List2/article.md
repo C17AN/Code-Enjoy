@@ -1,5 +1,5 @@
 ---
-title: '[SWEA] - SW 문제 해결 기본 - List2'
+title: '[SWEA] - SW 문제 해결 기본 : List2'
 date: 2020-10-06 12:21:13
 category: 'PS'
 thumbnail: './thumbnail.PNG'
@@ -12,7 +12,8 @@ draft: false
 
 ## 문제 목록
 
-> [D2] No. 4836 색칠하기
+> [D2] No. 4836 색칠하기  
+> [D2] No. 4839 이진탐색
 
 ## 풀이 코드 (Python)
 
@@ -41,4 +42,37 @@ for i in range(1, T + 1):
                 cnt += 1
 
     print("#{} {}".format(i, cnt))
+```
+
+---
+
+### 2. 이진탐색
+
+- 파이썬의 기본 나눗셈 연산은 소숫점까지 계산합니다. (Ex. 5 나누기 2 의 결과는 2.5)
+
+```python
+T = int(input())
+
+def binSearch(mid, left, right, cnt, find):
+    while True:
+        if find == mid:
+            return cnt
+        if find > mid:
+            return binSearch(int((mid + right) / 2), mid, right, cnt+1, find)
+        elif find < mid:
+            return binSearch(int((mid + left) / 2), left, mid, cnt+1, find)
+
+
+for i in range(1, T+1):
+    P, Pa, Pb = map(int, input().split())
+    cntA, cntB = 0, 0
+    cntA = binSearch(int((1 + P) / 2), 1, P, 0, Pa)
+    cntB = binSearch(int((1 + P) / 2), 1, P, 0, Pb)
+
+    if cntA == cntB:
+        print("#{} {}".format(i, '0'))
+    elif cntA < cntB:
+        print("#{} {}".format(i, 'A'))
+    else:
+        print("#{} {}".format(i, 'B'))
 ```

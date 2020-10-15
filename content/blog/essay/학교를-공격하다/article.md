@@ -2,7 +2,7 @@
 title: '[Story] - 학과 홈페이지에 디도스 공격한 썰'
 date: 2020-09-24 12:21:13
 thumbnail: './thumbnail.PNG'
-category: 'essay'
+category: 'story'
 draft: false
 ---
 
