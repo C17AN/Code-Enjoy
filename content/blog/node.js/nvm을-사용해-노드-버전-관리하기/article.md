@@ -10,23 +10,23 @@ draft: false
 ## 1. 사건의 발단
 
 ```js
-import React, { useState } from "react";
+import React, { useState } from 'react'
 
 export default function TodoList() {
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState([])
   const onClick = () => {
-    import("./Todo.js").then(({ Todo }) => {
-      const position = todos.length + 1;
-      const newTodo = <Todo key={position} title={`할 일 ${position}`} />;
-      setTodos([...todos, newTodo]);
-    });
-  };
+    import('./Todo.js').then(({ Todo }) => {
+      const position = todos.length + 1
+      const newTodo = <Todo key={position} title={`할 일 ${position}`} />
+      setTodos([...todos, newTodo])
+    })
+  }
   return (
     <div>
       <button onClick={onClick}>할 일 추가</button>
       {todos}
     </div>
-  );
+  )
 }
 ```
 
@@ -35,7 +35,7 @@ export default function TodoList() {
 
 ![에러](./노드 이슈.PNG)
 
-아무래도 동적 임포트 부분이 문제였던 것 같은데.. 치솟는 분노를 뒤로 하고 스택오버플로에 검색한 결과 옛날 노드(Node.js) 버전에서는 `async/await` 기능을 지원하지 않아 생긴 문제임을 알 수 있었다. 
+아무래도 동적 임포트 부분이 문제였던 것 같은데.. 치솟는 분노를 뒤로 하고 스택오버플로에 검색한 결과 옛날 노드(Node.js) 버전에서는 `async/await` 기능을 지원하지 않아 생긴 문제임을 알 수 있었다.
 
 그런데 잠깐! 나는 분명 노드 12 버전을 사용하고 있을 텐데? 뭔가 이상했다.
 
@@ -43,9 +43,9 @@ export default function TodoList() {
 
 ![nvm](./노드 버전 변경.PNG)
 
-여기서 한가지 팁을 적자면 터미널에 `nvm` 을 입력하면 노드를 관리할 수 있는 여러 항목이 나타난다.  
+여기서 한가지 팁을 적자면 터미널에 `nvm` 을 입력하면 노드를 관리할 수 있는 여러 항목이 나타난다.
 
-그 중에서도 `nvm install <버전> [운영체제 bit]` 를 입력하면 원하는 버전의 노드를 설치할 수 있는데 나는 `nvm install latest 64` 라는 명령어를 통해 64비트용 최신 노드를 설치했다.  
+그 중에서도 `nvm install <버전> [운영체제 bit]` 를 입력하면 원하는 버전의 노드를 설치할 수 있는데 나는 `nvm install latest 64` 라는 명령어를 통해 64비트용 최신 노드를 설치했다.
 
 ![노드 리스트](./노드 목록.PNG)
 
@@ -66,6 +66,3 @@ export default function TodoList() {
 - 설치된 노드 목록 확인 명령어 : `nvm list`
 
 - 특정 버전의 노드 사용 명령어 : `nvm use <버전>`
-
-
-
