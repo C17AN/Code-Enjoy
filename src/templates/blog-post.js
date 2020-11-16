@@ -36,7 +36,7 @@ export default ({ data, pageContext, location }) => {
       : undefined
 
   return (
-    <Layout location={location} title={title}>
+    <Layout location={location} title={title} isPost={true}>
       <Head
         title={postTitle}
         description={post.excerpt}
