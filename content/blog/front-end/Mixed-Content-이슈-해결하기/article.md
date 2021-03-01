@@ -6,7 +6,6 @@ thumbnail: './thumbnail.PNG'
 draft: false
 ---
 
-![thumbnail](./thumbnail.PNG)
 
 ## 1. http - https 간 네트워크 이슈
 

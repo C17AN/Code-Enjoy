@@ -2,11 +2,9 @@
 title: '[Story] - 항공교통물류학부 홈페이지 제작기 : 1편'
 date: 2020-08-27 12:21:13
 category: 'story'
-thumbnail: './image/thumbnail.PNG'
 draft: false
 ---
 
-![thumbnail](./image/thumbnail.PNG)
 
 ## 1. Prelude
 

@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 
 import { Top } from '../components/top'
 import { Header } from '../components/header'
@@ -9,29 +8,25 @@ import { rhythm } from '../utils/typography'
 
 import './index.scss'
 
-const Wrapper = styled.div`
-  max-width: ${rhythm(30)};
-  padding: ${rhythm(1.5)} ${rhythm(3 / 4)};
-  margin-left: ${props => (props.isPost ? 'auto' : '25rem')};
-  margin-right: ${props => (props.isPost ? 'auto' : '0rem')};
-  @media (max-width: 768px) {
-    margin-left: auto;
-    margin-right: auto;
-  }
-`
-
-export const Layout = ({ location, title, children, isPost }) => {
+export const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
 
   return (
     <React.Fragment>
       <Top title={title} location={location} rootPath={rootPath} />
-      <Wrapper>
+      <div
+        style={{
+          marginLeft: `auto`,
+          marginRight: `auto`,
+          maxWidth: rhythm(28),
+          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+        }}
+      >
         <ThemeSwitch />
         <Header title={title} location={location} rootPath={rootPath} />
         {children}
         <Footer />
-      </Wrapper>
+      </div>
     </React.Fragment>
   )
 }

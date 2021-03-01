@@ -52,9 +52,6 @@ export const Bio = () => (
                   <Link to={'/projects'}>
                     <span>Portfolio</span>
                   </Link>
-                  <Link to={'/guestBook'}>
-                    <span>Guestbook</span>
-                  </Link>
                 </p>
               </div>
             </div>

@@ -1,25 +1,28 @@
 @import '../../styles/variables.scss';
 @import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 
 .thumbnail {
+  transition: 0.1s ease-out;
   display: block;
   margin: 1.2rem 0;
   padding: 1rem;
   border-bottom: 0.5px solid #dce3e9;
   p {
-    font-family: 'NanumSquare';
+    font-family: 'Avenir, SpoqaHanSans, "Apple SD Gothic Neo", NanumSquare';
     font-size: 95%;
     line-height: 1.6;
   }
   h3 {
-    font-family: 'NanumSquare';
+    font-family: 'Avenir, SpoqaHanSans, "Apple SD Gothic Neo", NanumSquare';
     margin: 1rem 0.5rem;
     line-height: 2rem;
   }
   h6 {
     margin: 1.5rem 0 0.5rem 0;
     font-style: italic;
-    font-family: 'NanumSquare';
+    font-family: 'Noto Sans KR';
     text-align: right;
   }
 }

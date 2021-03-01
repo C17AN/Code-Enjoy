@@ -6,7 +6,6 @@ thumbnail: './thumbnail.PNG'
 draft: false
 ---
 
-![thumbnail](thumbnail.PNG)
 
 ## 1. 방명록을 만들다
 

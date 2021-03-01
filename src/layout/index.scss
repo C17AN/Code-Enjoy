@@ -7,21 +7,24 @@
 h1 {
   font-weight: 700;
   line-height: 1.2;
-  font-family: 'NanumSquare', 'Spoqa Han Sans', 'Noto Sans KR', sans-serif;
+  font-family: Avenir, 'SpoqaHanSans', 'Apple SD Gothic Neo', 'NanumSquare',
+    sans-serif;
 }
 
 h2 {
   font-weight: 700;
   line-height: 1.2;
-  font-family: 'NanumSquare', 'Spoqa Han Sans', 'Noto Sans KR', sans-serif;
+  font-family: Avenir, 'SpoqaHanSans', 'Apple SD Gothic Neo', 'NanumSquare',
+    sans-serif;
   margin-top: 56px;
   margin-bottom: 20px;
 }
 
 body {
-  font-family: 'NanumSquare', 'Spoqa Han Sans', 'Noto Sans KR', sans-serif;
-  font-weight: lighter;
-  color: black;
+  font-family: Avenir, 'SpoqaHanSans', 'Apple SD Gothic Neo', 'NanumSquare',
+    sans-serif;
+  font-size: 15px;
+  color: #333333;
   text-shadow: none;
   line-height: 1.74rem;
   background-color: $light-background-color;
@@ -41,7 +44,7 @@ body:active {
 @media (max-width: 768px) {
   body {
     font-family: 'Spoqa Han Sans', 'Noto Sans KR', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 0.9rem;
   }
 }

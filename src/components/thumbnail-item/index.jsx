@@ -9,7 +9,9 @@ export const ThumbnailItem = ({ node }) => (
     <div key={node.fields.slug}>
       <h3>{node.frontmatter.title || node.fields.slug}</h3>
       <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-      <h6>Posted by C17AN on {node.frontmatter.date}</h6>
+      <h6 style={{ color: '#70a0cd', fontWeight: 400 }}>
+        Posted by C17AN on {node.frontmatter.date}
+      </h6>
     </div>
   </Link>
 )
