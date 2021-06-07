@@ -4,36 +4,33 @@
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 
 .thumbnail {
-  transition: 0.1s ease-out;
+  transition: 0.2s ease-in-out !important;
   display: block;
   margin: 1.2rem 0;
   padding: 1rem;
   border-bottom: 0.5px solid #dce3e9;
   p {
-    font-family: 'Avenir, SpoqaHanSans, "Apple SD Gothic Neo", NanumSquare';
-    font-size: 95%;
-    line-height: 1.6;
+    font-size: 0.9rem;
+    line-height: 1.8;
   }
   h3 {
-    font-family: 'Avenir, SpoqaHanSans, "Apple SD Gothic Neo", NanumSquare';
     margin: 1rem 0.5rem;
     line-height: 2rem;
   }
   h6 {
     margin: 1.5rem 0 0.5rem 0;
     font-style: italic;
-    font-family: 'Noto Sans KR';
     text-align: right;
   }
 }
+
 .thumbnail.visible {
   opacity: 1;
 }
 
 .thumbnail:hover {
-  transition: 0.1s ease-out;
-  transform: scale(1.02);
-  border-radius: 8px;
-  border: 1px solid #cdcdcd;
-  box-shadow: 2px 2px 2px #cdcdcd;
+  h3 {
+    transition: 0.2s ease-in-out !important;
+    color: rgb(135, 173, 199) !important;
+  }
 }

@@ -49,9 +49,12 @@ export const Bio = () => (
                       LinkedIn
                     </a>
                   )}
-                  <Link to={'/projects'}>
+                  <a
+                    href="https://www.notion.so/chamming2/8f0f42b804e147a4bb7b4617403a729c"
+                    target="_blank"
+                  >
                     <span>Portfolio</span>
-                  </Link>
+                  </a>
                 </p>
               </div>
             </div>

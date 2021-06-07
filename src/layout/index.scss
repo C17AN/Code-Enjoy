@@ -7,22 +7,19 @@
 h1 {
   font-weight: 700;
   line-height: 1.2;
-  font-family: Avenir, 'SpoqaHanSans', 'Apple SD Gothic Neo', 'NanumSquare',
-    sans-serif;
 }
 
 h2 {
   font-weight: 700;
   line-height: 1.2;
-  font-family: Avenir, 'SpoqaHanSans', 'Apple SD Gothic Neo', 'NanumSquare',
-    sans-serif;
   margin-top: 56px;
   margin-bottom: 20px;
 }
 
 body {
-  font-family: Avenir, 'SpoqaHanSans', 'Apple SD Gothic Neo', 'NanumSquare',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue',
+    'Apple SD Gothic Neo', 'source sans pro', 'Apple SD Gothic Neo',
+    'NanumSquare', 'Malgun Gothic', '맑은 고딕', 'Nanum Gothic' !important;
   font-size: 15px;
   color: #333333;
   text-shadow: none;
