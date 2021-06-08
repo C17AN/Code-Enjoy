@@ -55,6 +55,7 @@ export const Bio = () => (
                   >
                     <span>Portfolio</span>
                   </a>
+                  <Link to="/guestBook">GuestBook</Link>
                 </p>
               </div>
             </div>

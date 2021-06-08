@@ -8,7 +8,17 @@ import * as Lang from '../constants'
 import '../components/top/index.scss'
 import '../styles/guestBook.scss'
 
+const tok1 = 'ghp_qDMuOZojW6M'
+const tok2 = '4qVjAFfTJccpt'
+const tok3 = '1kqw51ns5WZ'
+
 export default ({ data, location }) => {
+  const [guestList, setGuestList] = useState([])
+  const [guestName, setGuestName] = useState('')
+  const [message, setMessage] = useState('')
+  const [secret, setSecret] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
+
   useEffect(() => {
     fetch('https://api.github.com/repos/c17an/Merrily-Code/issues')
       .then(res => res.json())
@@ -34,15 +44,7 @@ export default ({ data, location }) => {
         )
       })
   }, [])
-  
-  const [guestList, setGuestList] = useState([])
-  const [guestName, setGuestName] = useState('')
-  const [message, setMessage] = useState('')
-  const [secret, setSecret] = useState(false)
-  const [isLoading, setIsLoading] = useState(true)
-  const tok1 = '6efc985955a7e'
-  const tok2 = '7098f4fcf35f9'
-  const tok3 = '44172b55f71deb'
+
   const handleSubmit = e => {
     const timestamp = new Date().getTime()
     e.preventDefault()
@@ -57,18 +59,19 @@ export default ({ data, location }) => {
         body: `${message} - ${new Date(timestamp).toLocaleString()}`,
         labels: secret ? ['GuestBook', 'Secret'] : ['GuestBook'],
       }),
+    }).then(data => {
+      setGuestList([
+        {
+          title: guestName,
+          body: message + ` - ${new Date(timestamp).toLocaleString()}`,
+          //labels: secret ? ['GuestBook', 'Secret'] : ['GuestBook'],
+          labels: secret
+            ? [{ name: 'GuestBook' }, { name: 'Secret' }]
+            : [{ name: 'GuestBook' }],
+        },
+        ...guestList,
+      ])
     })
-      .then(data => {
-        setGuestList([
-          {
-            title: guestName,
-            body: message + ` - ${new Date(timestamp).toLocaleString()}`,
-            //labels: secret ? ['GuestBook', 'Secret'] : ['GuestBook'],
-            labels: secret ? [{name: "GuestBook"}, {name: "Secret"}] : [{name: "GuestBook"}]
-          },
-          ...guestList,
-        ])
-      })
     setGuestName('')
     setMessage('')
   }

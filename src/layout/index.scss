@@ -20,10 +20,10 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue',
     'Apple SD Gothic Neo', 'source sans pro', 'Apple SD Gothic Neo',
     'NanumSquare', 'Malgun Gothic', '맑은 고딕', 'Nanum Gothic' !important;
-  font-size: 15px;
+  font-size: 16px;
   color: #333333;
   text-shadow: none;
-  line-height: 1.74rem;
+  line-height: 1.9;
   background-color: $light-background-color;
   -webkit-text-size-adjust: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -42,6 +42,8 @@ body:active {
   body {
     font-family: 'Spoqa Han Sans', 'Noto Sans KR', sans-serif;
     font-weight: 400;
+    font-size: 15px;
+
     font-size: 0.9rem;
   }
 }

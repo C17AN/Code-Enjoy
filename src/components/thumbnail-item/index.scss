@@ -6,8 +6,8 @@
 .thumbnail {
   transition: 0.2s ease-in-out !important;
   display: block;
-  margin: 1.2rem 0;
-  padding: 1rem;
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
   border-bottom: 0.5px solid #dce3e9;
   p {
     font-size: 0.9rem;
@@ -33,4 +33,7 @@
     transition: 0.2s ease-in-out !important;
     color: rgb(135, 173, 199) !important;
   }
+}
+
+.post-thumbnail-image {
 }
